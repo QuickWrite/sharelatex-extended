@@ -1,10 +1,11 @@
 FROM sharelatex/sharelatex:latest
 # using the official image as a base
 
-LABEL \
-  org.opencontainers.image.title="Overleaf with full TeX Live" \
-  org.opencontainers.image.source="https://github.com/quickwrite/sharelatex-extended" \
-  org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.title="Overleaf with full TeX Live" \
+      org.opencontainers.image.description="An extended ShareLaTeX (Overleaf) image with a broad set of LaTeX packages." \
+      org.opencontainers.image.licenses="MIT, AGPL 3.0, LPPL, (and more)" \
+      org.opencontainers.image.url="https://github.com/QuickWrite/sharelatex-extended" \
+      org.opencontainers.image.source="https://github.com/QuickWrite/sharelatex-extended"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
